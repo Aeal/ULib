@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTween", "iTween\iTween.csproj", "{498559A9-0BB5-47ED-945E-67632B3B459F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLib", "UnityLib\UnityLib.csproj", "{664C9C8F-08B3-4C4B-8208-B23670F4941E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UNITY_EDITOR|Any CPU = UNITY_EDITOR|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.UNITY_EDITOR|Any CPU.ActiveCfg = Release|Any CPU
+		{498559A9-0BB5-47ED-945E-67632B3B459F}.UNITY_EDITOR|Any CPU.Build.0 = Release|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.UNITY_EDITOR|Any CPU.ActiveCfg = Release|Any CPU
+		{664C9C8F-08B3-4C4B-8208-B23670F4941E}.UNITY_EDITOR|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

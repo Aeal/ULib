@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{664C9C8F-08B3-4C4B-8208-B23670F4941E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityLib</RootNamespace>
+    <AssemblyName>UnityLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Runtime\Chronos\Calendar.cs" />
+    <Compile Include="Runtime\Chronos\Chronos.cs" />
+    <Compile Include="Runtime\Chronos\ChronosManager.cs" />
+    <Compile Include="Runtime\Conversation\Conversation.cs" />
+    <Compile Include="Runtime\Conversation\DialogNode.cs" />
+    <Compile Include="Runtime\Conversation\DialogNode_Editor.cs" />
+    <Compile Include="Editor\Debug\DebugConsole.cs" />
+    <Compile Include="Editor\ComponentEditor\ChronosEditor.cs" />
+    <Compile Include="Editor\ComponentEditor\InteractionEditor.cs" />
+    <Compile Include="Editor\Editors\CalendarEditor.cs" />
+    <Compile Include="Editor\Editors\NodeEditor.cs" />
+    <Compile Include="Editor\Editors\NodeSceneView.cs" />
+    <Compile Include="Editor\Extensions\AdvancedSceneView.cs" />
+    <Compile Include="Editor\Properties\AssemblyInfo.cs" />
+    <Compile Include="Editor\Utilities\ConversationActionWizard.cs" />
+    <Compile Include="Editor\Utilities\ConvertToPrefabWizard.cs" />
+    <Compile Include="Editor\Utilities\GUIWindow.cs" />
+    <Compile Include="Runtime\Interactions\Actions\Action.cs" />
+    <Compile Include="Runtime\Interactions\Actions\MoveAction.cs" />
+    <Compile Include="Runtime\Interactions\Actions\PopupAction.cs" />
+    <Compile Include="Runtime\Interactions\Actions\RotateAction.cs" />
+    <Compile Include="Runtime\Interactions\Actions\SoundAction.cs" />
+    <Compile Include="Runtime\Interactions\Interaction.cs" />
+    <Compile Include="Runtime\Interactions\Triggers\ClickedTrigger.cs" />
+    <Compile Include="Runtime\Interactions\Triggers\Trigger.cs" />
+    <Compile Include="Runtime\Interactions\Triggers\VolumeTrigger.cs" />
+    <Compile Include="Runtime\Nodes\ComponentNodes\ComponentNode.cs" />
+    <Compile Include="Runtime\Nodes\ComponentNodes\ComponentNode_Editor.cs" />
+    <Compile Include="Runtime\Nodes\INodeGUI.cs" />
+    <Compile Include="Runtime\Nodes\Inspectors\ComponentNodeInspector.cs" />
+    <Compile Include="Runtime\Nodes\Inspectors\NodeInspector.cs" />
+    <Compile Include="Runtime\Nodes\Inspectors\NodeInspectorBase.cs" />
+    <Compile Include="Runtime\Nodes\Nodes\ActionNode.cs" />
+    <Compile Include="Runtime\Nodes\Nodes\Node.cs" />
+    <Compile Include="Runtime\Peasant\Peasant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\Slideshow\Slide.cs" />
+    <Compile Include="Runtime\Slideshow\SlideShow.cs" />
+    <Compile Include="Runtime\Utility\Components\ComponentSingleton.cs" />
+    <Compile Include="Runtime\Utility\Components\SoundManager.cs" />
+    <Compile Include="Runtime\Utility\Drawing.cs" />
+    <Compile Include="Runtime\Utility\GUIControls\ActionConnector.cs" />
+    <Compile Include="Runtime\Utility\GUIUtil.cs" />
+    <Compile Include="Runtime\Utility\GUIWindow.cs" />
+    <Compile Include="Runtime\Utility\Input\InputBase.cs" />
+    <Compile Include="Runtime\Utility\Input\InputManager.cs" />
+    <Compile Include="Runtime\Utility\Input\PCInput.cs" />
+    <Compile Include="Runtime\Utility\Singleton.cs" />
+    <Compile Include="Runtime\Utility\Timer.cs" />
+    <Compile Include="Runtime\Utility\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iTween\iTween.csproj">
+      <Project>{498559A9-0BB5-47ED-945E-67632B3B459F}</Project>
+      <Name>iTween</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Editor\*.*" "$(ProjectDir)..\..\UnityProject\Assets\Editor\*.*" /E /D /I /Y
+xcopy "$(ProjectDir)Runtime\*.*" "$(ProjectDir)..\..\UnityProject\Assets\Plugins\$(ProjectName)\*.*" /E /D /I /Y</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
